@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Trock family portal</title>
 </head>
-
 <body class="bg-gray-100">
     <div class="flex flex-col items-center justify-center h-screen">
         <img src="./trock_icon.svg" alt="Studenture Logo" class="w-32 mb-8">
@@ -17,8 +15,13 @@
         <a href="https://jake.trock.com"
             class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 mb-2">Jacob</a>
         <a href="https://evan.trock.com" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Evan</a>
-        <p class="mt-4 text-gray-500">Site owned by Trock family 1994-2024.</p>
+        <p class="mt-4 text-gray-500">Site owned by Trock family 1994-<span id="current-year"></span>.</p>
     </div>
+    <script>
+        // Get the current year
+        const currentYear = new Date().getFullYear();
+        // Set the current year in the span with id "current-year"
+        document.getElementById('current-year').textContent = currentYear;
+    </script>
 </body>
-
 </html>
